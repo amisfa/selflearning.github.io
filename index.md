@@ -29,14 +29,16 @@ If "locate" can't found your package link you must update database of "locate" w
 sudo updatedb
 ```
 
-Now get link and go to the file directory(you can save this file anywhere you want, we suppos file in this link : /home/user/Downloads/lampp_extensions/redis-5.3.2.tgz
+Now get link and go to the file directory(you can save this file anywhere you want, we suppose file in this link : /home/user/Downloads/lampp_extensions/redis-5.3.2.tgz
 ):
 ```markdown
 cd /home/user/Downloads/lampp_extensions
 ```
-
+Now you should extract file
 ```markdown
 tar xzf redis-5.3.2.tgz
+```
+```markdown
 cd redis-5.3.2
 phpize
 ./configure --with-php-config=/opt/lampp/bin/php-config
@@ -57,7 +59,3 @@ And search redis with ctrl+f in this page:
 ```markdown
 localhost/phpinfo.php
 ```
-
-
-
-
