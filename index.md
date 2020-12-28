@@ -18,7 +18,7 @@ then you must download redis-5.3.2.tgz with this command:
 wget https://pecl.php.net/get/redis-5.3.2.tgz
 ```
 
-Get link where this package is with:
+Get the location file with this command:
 ```markdown
 locate redis-5.3.2.tgz
 ```
