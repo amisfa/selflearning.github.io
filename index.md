@@ -35,3 +35,55 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
+
+
+
+///////////////////////////////////////////////////////////////
+//first you should run these commands in terminal:
+sudo apt-get update
+sudo apt-get install php-redis build-essential libtool autoconf unzip wget mlocate
+
+
+//and
+you can use each redis version insted redis-5.3.2.tgz, check here:
+https://pecl.php.net/package/redis
+then you must:
+wget https://pecl.php.net/get/redis-5.3.2.tgz
+
+get link where dl this package with:
+locate redis-5.3.2.tgz
+
+
+if locate cant found your package link you must update database of locate whith this command(By default it is updated once in a day):
+sudo updatedb
+
+now get link and go to the file directory(you can save this file where you want, we suppos file in this link : /home/user/Downloads/lampp_extensions/redis-5.3.2.tgz
+):
+cd /home/user/Downloads/lampp_extensions
+
+tar xzf redis-5.3.2.tgz
+cd redis-5.3.2
+phpize
+./configure --with-php-config=/opt/lampp/bin/php-config
+make
+sudo make install
+
+
+//finally add below line to /opt/lampp/etc/php.ini
+
+extension="redis.so"
+
+
+restart your xampp with this command:
+sudo /opt/lampp/lampp restart
+
+and search redis with ctrl+f in this page:
+localhost/phpinfo.php
+
+
+
+
+
+
